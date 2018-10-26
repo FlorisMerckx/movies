@@ -14,7 +14,6 @@
  
 
  body, html {
-     font-size: 16px;
      font-family: 'Roboto', sans-serif;
      
  }
@@ -29,20 +28,6 @@ h1 {
 
 h2 {
     font-family: 'Bungee Inline', cursive;
-}
-
-h1 {
-    text-transform: uppercase;
-    font-size: 3rem;
-}
-
-h2 {
-    font-size: 2.25rem;
-    line-height: 3rem;
-    margin-bottom: 1.5rem;
-}
-
-h3 {font-size: 1.5rem;
 }
 
 
@@ -75,11 +60,23 @@ h3 {font-size: 1.5rem;
     padding-top: 0;
 }
 
+.standardpadding{
+    padding: 96px 0 0 0;
+}
+
+.standardpadding>p{
+    font-size: 1rem;
+    color: #F5EBDF;
+}
+
+.lead {
+    margin-top: 24px;
+    margin-bottom: 0;
+}
+
 /* ==============================================
-   MOVIES STYLES
+   MOVIES GLOBAL
    ============================================== */
-
-
 
 .movie1-desktop, .movie2-desktop, .movie3-desktop, .movie4-desktop, .movie5-desktop {
     min-height: 100vh;
@@ -94,7 +91,6 @@ h3 {font-size: 1.5rem;
     background-image: url("../images/o-bladerunner3.jpg");
     
 }
-
 
 .movie2-desktop {
     background-image: url("../images/o-assassination-of-Jesse-James.jpg");
@@ -116,6 +112,14 @@ h3 {font-size: 1.5rem;
     
 }
 
+.d-md-none {
+    background-color: #F5EBDF;
+}
+
+/* ==============================================
+   MOVIES ARTICLE
+   ============================================== */
+
 article {
     background-color: #F5EBDF;
     padding: 24px;
@@ -133,9 +137,9 @@ article {
     padding-bottom: 6px;
 }
 
-.d-md-none {
-    background-color: #F5EBDF;
-}
+/* ==============================================
+   MOVIES BUTTON
+   ============================================== */
 
 .btn{
     color: #F5EBDF;
@@ -165,20 +169,6 @@ article {
 
 .btn:hover, .btn:active{
     background-color:rgb(129, 41, 23);
-}
-
-.standardpadding{
-    padding: 96px 0 0 0;
-}
-
-.standardpadding>p{
-    font-size: 1rem;
-    color: #F5EBDF;
-}
-
-.lead {
-    margin-top: 24px;
-    margin-bottom: 0;
 }
 
 
@@ -218,12 +208,51 @@ article {
  /* Extra small devices (portrait phones, less than 576px)
  / No media query since this is the default in Bootstrap*/
  
- 
+ @media (max-width: 575px) {
+    body, html {
+        font-size: 14px;
+    }
+    
+    h1 {
+        text-transform: uppercase;
+        font-size: 2.25rem;
+    }
+    
+    h2 {
+        font-size: 2rem;
+        line-height: 2.25rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    h3 {font-size: 1.25rem;
+    }
+ }
+
+
+
  /* Small devices (landscape phones, 576px and up)*/
  
  @media (min-width: 576px) {
     .abovefold {
         background-color: #141414;
+    }
+
+    body, html {
+        font-size: 16px;  
+    }
+
+    h1 {
+        text-transform: uppercase;
+        font-size: 3rem;
+    }
+    
+    h2 {
+        font-size: 2.25rem;
+        line-height: 3rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    h3 {font-size: 1.5rem;
     }
 
  }
@@ -240,7 +269,7 @@ article {
         background-size: cover;
         height: 95vh;
     }
-    
+
 }
  
  
